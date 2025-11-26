@@ -1,0 +1,58 @@
+# Project: TesteSDL
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = src/algebra.o src/convolve.o src/destroy.o src/images.o src/init.o src/lista_enc.o src/main.o src/pilha.o src/pilha_acao.o src/pilha_matrix.o src/texts.o
+LINKOBJ  = src/algebra.o src/convolve.o src/destroy.o src/images.o src/init.o src/lista_enc.o src/main.o src/pilha.o src/pilha_acao.o src/pilha_matrix.o src/texts.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -L"C:/Dev-Cpp/SDL_image/lib" -L"C:/Dev-Cpp/SDL3_text/lib" -static-libgcc -L"C:/Dev-Cpp/SDL3/lib" -L"C:/Dev-Cpp/SDL3_text/lib" -L"C:/Dev-Cpp/SDL_image/lib" -lmingw32 -lSDL3 -mconsole -lSDL3_ttf
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Dev-Cpp/SDL_image/include" -I"C:/Dev-Cpp/SDL3_text/include" -I"C:/Dev-Cpp/SDL3/include" -I"C:/Dev-Cpp/SDL3_text/include" -I"C:/Dev-Cpp/SDL3_text/include/SDL3_ttf" -I"C:/ProjetosSDL/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Dev-Cpp/SDL3/include" -I"C:/Dev-Cpp/SDL3_text/include" -I"C:/Dev-Cpp/SDL3_text/include/SDL3_ttf" -I"C:/ProjetosSDL/include"
+BIN      = TesteSDL.exe
+CXXFLAGS = $(CXXINCS) -std=gnu11
+CFLAGS   = $(INCS) -std=gnu11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+src/algebra.o: src/algebra.c
+	$(CC) -c src/algebra.c -o src/algebra.o $(CFLAGS)
+
+src/convolve.o: src/convolve.c
+	$(CC) -c src/convolve.c -o src/convolve.o $(CFLAGS)
+
+src/destroy.o: src/destroy.c
+	$(CC) -c src/destroy.c -o src/destroy.o $(CFLAGS)
+
+src/images.o: src/images.c
+	$(CC) -c src/images.c -o src/images.o $(CFLAGS)
+
+src/init.o: src/init.c
+	$(CC) -c src/init.c -o src/init.o $(CFLAGS)
+
+src/lista_enc.o: src/lista_enc.c
+	$(CC) -c src/lista_enc.c -o src/lista_enc.o $(CFLAGS)
+
+src/main.o: src/main.c
+	$(CC) -c src/main.c -o src/main.o $(CFLAGS)
+
+src/pilha.o: src/pilha.c
+	$(CC) -c src/pilha.c -o src/pilha.o $(CFLAGS)
+
+src/pilha_acao.o: src/pilha_acao.c
+	$(CC) -c src/pilha_acao.c -o src/pilha_acao.o $(CFLAGS)
+
+src/pilha_matrix.o: src/pilha_matrix.c
+	$(CC) -c src/pilha_matrix.c -o src/pilha_matrix.o $(CFLAGS)
+
+src/texts.o: src/texts.c
+	$(CC) -c src/texts.c -o src/texts.o $(CFLAGS)
