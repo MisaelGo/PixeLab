@@ -1,63 +1,103 @@
-# PixeLab
-Aplicativo em C com SDL3 para editar uma matriz 3x3 (kernel) e aplicar filtros de convolução em uma imagem.
+<div align="center">
+  <h1>PixeLab</h1>
+  <p><strong>Aplicativo em C + SDL3</strong> para editar uma matriz 3×3 (kernel) e aplicar filtros de convolução em imagens.</p>
+</div>
 
-Este projeto é uma aplicação gráfica desenvolvida em C + SDL3, que permite:
+<hr/>
 
-✅ Editar matrizes 3×3 manualmente
-✅ Aplicar filtros de convolução em imagens
-✅ Criar / editar / testar kernels personalizados
-✅ Trocar linhas, somar linhas, multiplicar por escalar
-✅ Visualizar todo o processo com retângulos, destaques, botões e interface interativa
-✅ Desfazer operações através de uma pilha de ações
-✅ Exibir mensagens informativas ao usuário
+<div>
+  <h2>✨ Visão Geral</h2>
+  <p>O PixeLab foi desenvolvido com foco em:</p>
 
-O software foi construído com foco em aprendizado de álgebra linear, processamento de imagens e interfaces gráficas SDL3.
+  <ul>
+    <li>Álgebra Linear</li>
+    <li>Processamento de Imagens</li>
+    <li>Interfaces Gráficas em SDL3</li>
+  </ul>
 
-📦 Funcionalidades
-🟦 1. Editor de Matriz 3×3
-Cada célula pode ser editada clicando e digitando.
-Aceita números entre -10 e 10.
-Valida entrada, evita valores inválidos.
-Cada célula possui borda de seleção.
-Linhas podem ser destacadas ao clicar em botões dedicados.
+  <p>Principais Recursos:</p>
 
-🔁 2. Operações Elementares de Linha
-Trocar linhas (Li ↔ Lj)
-Somar linhas (Li ← Li + k·Lj)
-Multiplicar linha por escalar (Li ← k·Li)
-Destaque visual da linha ativa ou destino.
-Mensagens claras guiando o usuário.
+  <ul>
+    <li>✔️ Editor de matriz 3×3 interativo</li>
+    <li>✔️ Aplicação de filtros de convolução</li>
+    <li>✔️ Kernels personalizados</li>
+    <li>✔️ Operações elementares de linha</li>
+    <li>✔️ Destaques visuais e interface gráfica</li>
+    <li>✔️ Desfazer com pilha de ações</li>
+    <li>✔️ Mensagens informativas dinâmicas</li>
+  </ul>
+</div>
 
-🎨 3. Filtros de Convolução em Imagem
-Desfoque (3x3)
-Nitro / Sharpen
-Laplace
-Emboss
-Detecção de bordas
-Kernel personalizado editado pelo usuário
+<hr/>
 
-📥 4. Pilha de Desfazer
-Guarda histórico das matrizes aplicadas.
-Ao desfazer, restaura a matriz, não só o filtro.
-Totalmente integrada com SDL_Textures.
+<div>
+  <h2>📦 Funcionalidades Detalhadas</h2>
 
-📝 5. Mensagens Informativas
-Textos dinâmicos explicam qualquer operação.
-Atualiza automaticamente quando o usuário age.
-Não sobrepõe textos (renderização limpa).
+  <h3>1. Editor de Matriz 3×3</h3>
+  <ul>
+    <li>Células clicáveis e editáveis</li>
+    <li>Valores permitidos: -10 a 10</li>
+    <li>Validação automática</li>
+    <li>Destaque por seleção</li>
+    <li>Destaque de linhas completas</li>
+  </ul>
 
-🔧 Requisitos
-Antes de compilar, instale:
-✔️ SDL3
-✔️ SDL3_ttf
-✔️ SDL3_image
-✔️ MinGW (ou outro compilador C)
-✔️ Dev-C++ (opcional – funciona no Makefile também)
+  <h3>2. Operações Elementares de Linha</h3>
+  <ul>
+    <li>Trocar linhas (Li ↔ Lj)</li>
+    <li>Somar linhas (Li ← Li + k·Lj)</li>
+    <li>Multiplicar linha (Li ← k·Li)</li>
+    <li>Feedback visual imediato</li>
+    <li>Mensagens orientando o usuário</li>
+  </ul>
 
-📁 Estrutura do Projeto
+  <h3>3. Filtros de Convolução</h3>
+  <ul>
+    <li>Desfoque (Blur)</li>
+    <li>Sharpen / Nitro</li>
+    <li>Laplace</li>
+    <li>Emboss</li>
+    <li>Detecção de Bordas</li>
+    <li>Kernel 3×3 totalmente personalizável</li>
+  </ul>
+
+  <h3>4. Sistema de Desfazer</h3>
+  <ul>
+    <li>Armazena todas as matrizes aplicadas</li>
+    <li>Undo restaura a matriz exata usada</li>
+    <li>Integrado com SDL_Texture</li>
+  </ul>
+
+  <h3>5. Mensagens Informativas</h3>
+  <ul>
+    <li>Textos dinâmicos</li>
+    <li>Explicações de cada ação</li>
+    <li>Nunca sobrepõe texto na tela</li>
+  </ul>
+</div>
+
+<hr/>
+
+<div>
+  <h2>🔧 Requisitos</h2>
+  <ul>
+    <li>SDL3</li>
+    <li>SDL3_ttf</li>
+    <li>SDL3_image</li>
+    <li>MinGW ou outro compilador C</li>
+    <li>Dev-C++ (opcional)</li>
+  </ul>
+</div>
+
+<hr/>
+
+<div>
+  <h2>📁 Estrutura do Projeto</h2>
+
+  <pre>
 ProjetosSDL/
 │
-├── src/                # Arquivos .c
+├── src/
 │   ├── main.c
 │   ├── algebra.c
 │   ├── convolve.c
@@ -70,7 +110,7 @@ ProjetosSDL/
 │   ├── pilha_matrix.c
 │   └── texts.c
 │
-├── include/            # Arquivos .h
+├── include/
 │   ├── main.h
 │   ├── algebra.h
 │   ├── convolve.h
@@ -83,64 +123,102 @@ ProjetosSDL/
 │   ├── pilha_matrix.h
 │   └── texts.h
 │
-├── assets/             # Imagens usadas no app
-│
-├── font/               # Fontes TTF
-│
-├── Makefile.win        # Makefile gerado pelo Dev-C++
-└── README.md           # Este arquivo
+├── assets/
+├── font/
+├── Makefile.win
+└── README.md
+  </pre>
+</div>
 
-▶️ Como Compilar
-Faça clone:
+<hr/>
+
+<div>
+  <h2>▶️ Como Compilar</h2>
+
+  <h3>Via Makefile</h3>
+  <pre>
 git clone https://github.com/seu-usuario/ProjetosSDL.git
 cd ProjetosSDL
-
-Compile usando Make:
 mingw32-make -f Makefile.win
-Ou abra TesteSDL.dev no Dev-C++ e clique em Compile & Run.
+  </pre>
 
-🖥️ Como Usar o Software
-1️⃣ Editando a Matriz
-Clique sobre qualquer célula.
-Digite valores entre -10 e 10.
-Pressione Enter para aplicar.
-Valores inválidos são ignorados.
+  <h3>Via Dev-C++</h3>
+  <p>Abra <strong>TesteSDL.dev</strong> e clique em <strong>Compile & Run</strong>.</p>
+</div>
 
-2️⃣ Operações Elementares
-Botões incluem:
-Li ↔ Lj — trocar linhas
-Li ← Li + k·Lj — soma de linhas
-Li ← k·Li — multiplicação por escalar
-Aplicar matriz na imagem
-O software sempre exibe instruções claras sobre o que fazer.
+<hr/>
 
-3️⃣ Criar e Testar Filtros
-Basta editar os valores e pressionar Aplicar.
+<div>
+  <h2>🖥️ Como Usar</h2>
 
-4️⃣ Desfazer
-Pressionar o botão de Undo restaura a última matriz aplicada.
+  <h3>1️⃣ Editando a Matriz</h3>
+  <ul>
+    <li>Clique na célula</li>
+    <li>Digite o valor</li>
+    <li>Pressione Enter</li>
+    <li>Erros são automaticamente ignorados</li>
+  </ul>
 
-💡 Tecnologias Utilizadas
-C (C11)
-SDL3
-SDL3_ttf
-SDL3_image
-Sistema de renderização por SDL_FRect
-Estruturas dinâmicas (pilha, lista encadeada)
-Convolução em imagens
-Ambiente gráfico
+  <h3>2️⃣ Operações de Linha</h3>
+  <ul>
+    <li>Trocar</li>
+    <li>Somar</li>
+    <li>Multiplicar</li>
+    <li>Aplicar matriz na imagem</li>
+  </ul>
 
-🧠 Por que este projeto é útil?
-Ele serve para:
-Estudar álgebra linear com visualização real.
-Aprender convolução, filtros, edge detection, blur, etc.
-Treinar conceitos de interface gráfica SDL3.
-Entender persistência de estado com pilha de ações.
-Criar kernels personalizados e ver o efeito instantaneamente.
+  <h3>3️⃣ Criar e Testar Filtros</h3>
+  <ul>
+    <li>Edite os valores 3×3</li>
+    <li>Clique em Aplicar</li>
+  </ul>
 
-Sinta-se livre para modificar, estudar e melhorar
+  <h3>4️⃣ Desfazer</h3>
+  <ul>
+    <li>Pressione Undo</li>
+    <li>A matriz anterior é restaurada fielmente</li>
+  </ul>
+</div>
 
-🙏 Agradecimentos
+<hr/>
 
-Obrigado por utilizar e estudar este projeto!
-Qualquer melhoria, ideia ou bug, envie uma issue ou pull request.
+<div>
+  <h2>💡 Tecnologias Utilizadas</h2>
+  <ul>
+    <li>C (C11)</li>
+    <li>SDL3</li>
+    <li>SDL3_ttf</li>
+    <li>SDL3_image</li>
+    <li>Renderização com SDL_FRect</li>
+    <li>Estruturas dinâmicas (pilhas, listas)</li>
+    <li>Convolução 3×3</li>
+  </ul>
+</div>
+
+<hr/>
+
+<div>
+  <h2>🧠 Por Que é Útil?</h2>
+  <ul>
+    <li>Visualização real de álgebra linear</li>
+    <li>Entendimento profundo de kernels</li>
+    <li>Treinamento de GUI com SDL3</li>
+    <li>Arquitetura com estado persistente</li>
+    <li>Criação de filtros personalizados</li>
+  </ul>
+</div>
+
+<hr/>
+
+<div>
+  <h2>🤝 Contribuições</h2>
+  <p>Sinta-se à vontade para enviar issues, sugestões e pull requests.</p>
+</div>
+
+<hr/>
+
+<div>
+  <h2>🙏 Agradecimentos</h2>
+  <p>Obrigado por usar e estudar este projeto!</p>
+</div>
+
