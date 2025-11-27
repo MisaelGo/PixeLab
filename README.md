@@ -15,7 +15,7 @@
 
   <li><strong>Vitor</strong> — Implementação do arquivo <code>algebra.c</code>, incluindo estruturação das funções e lógica inicial.</li>
 
-  <li><strong>Henrique</strong> — Coautor do arquivo <code>algebra.c</code>, contribuindo no desenvolvimento das operações de álgebra linear.</li>
+  <li><strong>Henrique</strong> — Implementação do arquivo <code>algebra.c</code>, incluindo estruturação das funções e lógica inicial.</li>
 
    <li><strong>Alyyson</strong> — Responsável pelos cálculos matemáticos do <code>algebra.c</code> e por todos os testes relacionados às operações da álgebra.</li>
 
