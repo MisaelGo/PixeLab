@@ -6,6 +6,27 @@
 <hr/>
 
 <div>
+  <h2>👥 Créditos e Colaboradores</h2>
+
+  <p>Este projeto foi desenvolvido com a dedicação e contribuição de várias pessoas talentosas:</p>
+
+  <ul>
+    <li><strong>Misael Gomes</strong> — Desenvolvedor principal do software, responsável pelo funcionamento geral do PixeLab.</li>
+
+  <li><strong>Vitor</strong> — Implementação do arquivo <code>algebra.c</code>, incluindo estruturação das funções e lógica inicial.</li>
+
+  <li><strong>Henrique</strong> — Coautor do arquivo <code>algebra.c</code>, contribuindo no desenvolvimento das operações de álgebra linear.</li>
+
+   <li><strong>Alyyson</strong> — Responsável pelos cálculos matemáticos do <code>algebra.c</code> e por todos os testes relacionados às operações da álgebra.</li>
+
+  <li><strong>Lícia Lucena</strong> — Designer oficial do software, trabalhando na interface visual, estilo e aparência geral do PixeLab.</li>
+  </ul>
+</div>
+
+
+<hr/>
+
+<div>
   <h2>✨ Visão Geral</h2>
   <p>O PixeLab foi desenvolvido com foco em:</p>
 
