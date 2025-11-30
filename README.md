@@ -23,7 +23,7 @@
   </ul>
 </div>
 
-<div align="center">
+<div>
   <h2>📦 Como Testar o Executável</h2>
   <p>
     Para testar somente o aplicativo <strong>TesteSDL.exe</strong>, basta baixar os seguintes itens e manter a estrutura de pastas organizada:
