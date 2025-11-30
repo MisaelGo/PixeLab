@@ -17,7 +17,7 @@
 
   <li><strong>Henrique</strong> — Implementação do arquivo <code>algebra.c</code>, incluindo estruturação das funções e lógica inicial.</li>
 
-   <li><strong>Alyyson</strong> — Responsável pelos cálculos matemáticos do <code>algebra.c</code> e por todos os testes relacionados às operações da álgebra.</li>
+   <li><strong>Allyson</strong> — Responsável pelos cálculos matemáticos do <code>algebra.c</code> e por todos os testes relacionados às operações da álgebra.</li>
 
   <li><strong>Lícia Lucena</strong> — Designer oficial do software, trabalhando na interface visual, estilo e aparência geral do PixeLab.</li>
   </ul>
