@@ -23,6 +23,47 @@
   </ul>
 </div>
 
+<div align="center">
+  <h2>📦 Como Testar o Executável</h2>
+  <p>
+    Para testar somente o aplicativo <strong>TesteSDL.exe</strong>, basta baixar os seguintes itens e manter a estrutura de pastas organizada:
+  </p>
+</div>
+
+<div style="border:1px solid #444; border-radius:8px; padding:16px; background:#111; color:#eee; font-family:Arial;">
+
+  <h3>📁 Estrutura obrigatória</h3>
+
+  <pre style="background:#000; padding:12px; border-radius:6px; color:#0f0;">
+TesteSDL.exe
+SDL3.dll
+SDL3_ttf.dll
+libSDL3_image.dll
+
+/assets
+    (imagens, ícones, sprites, etc.)
+
+/font
+    (arquivos .ttf usados pelo programa)
+  </pre>
+
+  <h3>📌 Resumo</h3>
+  <ul>
+    <li><strong>TesteSDL.exe</strong> — o executável principal</li>
+    <li><strong>SDL3.dll</strong> — DLL principal da SDL3</li>
+    <li><strong>SDL3_ttf.dll</strong> — para renderização de textos</li>
+    <li><strong>libSDL3_image.dll</strong> — para carregar imagens (PNG, JPG etc.)</li>
+    <li><strong>Pasta <code>assets/</code></strong> — arquivos gráficos usados pelo programa</li>
+    <li><strong>Pasta <code>font/</code></strong> — fonte(s) utilizada(s) pelo renderizador de texto</li>
+  </ul>
+
+  <h3>📝 Observação</h3>
+  <p>
+    A ausência de qualquer uma dessas pastas ou DLLs resultará em falha ao abrir o executável.
+  </p>
+
+</div>
+
 
 <hr/>
 
